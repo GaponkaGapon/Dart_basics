@@ -3,6 +3,7 @@ import 'tasks/2/binary_converter.dart';
 import 'tasks/3/search_nums.dart';
 import 'tasks/4/count_words.dart';
 import 'tasks/5/read_digits.dart';
+import 'tasks/6/point.dart';
 
 void main() {
   try {
@@ -40,6 +41,10 @@ void main() {
     for (var digit in readDigits(text.split(' '))) {
       print(digit);
     }
+
+    var origin = Point.origin();
+    var unitVector = Point.unitVector();
+    print('Length of unit vector: ${origin.distanceTo(unitVector)}');
   } catch (e) {
     print('Crash and burn: $e');
   }
