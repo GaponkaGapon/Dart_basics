@@ -4,6 +4,7 @@ import 'tasks/3/search_nums.dart';
 import 'tasks/4/count_words.dart';
 import 'tasks/5/read_digits.dart';
 import 'tasks/6/point.dart';
+import 'tasks/7/root_extraction.dart';
 
 void main() {
   try {
@@ -45,6 +46,10 @@ void main() {
     var origin = Point.origin();
     var unitVector = Point.unitVector();
     print('Length of unit vector: ${origin.distanceTo(unitVector)}');
+
+    double val = -27;
+    var degree = 3;
+    print('Root of $val in degree $degree: ${val.rootExtraction(degree)}');
   } catch (e) {
     print('Crash and burn: $e');
   }
