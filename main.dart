@@ -5,6 +5,7 @@ import 'tasks/4/count_words.dart';
 import 'tasks/5/read_digits.dart';
 import 'tasks/6/point.dart';
 import 'tasks/7/root_extraction.dart';
+import 'tasks/8/user.dart';
 
 void main() {
   try {
@@ -50,6 +51,14 @@ void main() {
     double val = -27;
     var degree = 3;
     print('Root of $val in degree $degree: ${val.rootExtraction(degree)}');
+
+    // Assumed, that emails are prevalidated.
+    var admin = AdminUser('admin@example.com');
+    var user1 = GeneralUser('user1@example.com');
+    var user2 = GeneralUser('user2@example.com');
+    User.printUsers();
+    user1.remove();
+    User.printUsers();
   } catch (e) {
     print('Crash and burn: $e');
   }
